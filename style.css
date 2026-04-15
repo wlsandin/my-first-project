@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f9a8d4 0%, #ec4899 100%);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  padding: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.75rem;
+}
+
+.bio {
+  color: #555;
+  line-height: 1.65;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.learning h2 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+.learning ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.learning li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  background: #f7f7fb;
+  border-radius: 0.85rem;
+  padding: 0.9rem 1rem;
+}
+
+.icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.learning li strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #1a1a2e;
+  margin-bottom: 0.2rem;
+}
+
+.learning li p {
+  font-size: 0.82rem;
+  color: #777;
+  line-height: 1.5;
+}
