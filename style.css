@@ -11,23 +11,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0a0a0a;
+  background-color: #0d000f;
   background-image:
-    linear-gradient(rgba(0, 255, 70, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 70, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255, 0, 170, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 170, 0.04) 1px, transparent 1px);
   background-size: 32px 32px;
   font-family: 'Share Tech Mono', monospace;
   padding: 2rem;
 }
 
 .card {
-  background: #0d0d0d;
-  border: 1px solid #00ff46;
+  background: #110015;
+  border: 1px solid #ff2daa;
   border-radius: 0;
   padding: 2.5rem 2rem;
   max-width: 480px;
   width: 100%;
-  box-shadow: 0 0 24px rgba(0, 255, 70, 0.25), inset 0 0 40px rgba(0, 255, 70, 0.03);
+  box-shadow: 0 0 24px rgba(255, 45, 170, 0.28), inset 0 0 40px rgba(255, 45, 170, 0.04);
   text-align: center;
 }
 
@@ -35,8 +35,8 @@ body {
   width: 108px;
   height: 108px;
   border-radius: 50%;
-  border: 2px solid #00ff46;
-  box-shadow: 0 0 12px rgba(0, 255, 70, 0.5);
+  border: 2px solid #ff2daa;
+  box-shadow: 0 0 12px rgba(255, 45, 170, 0.55);
   display: block;
   object-fit: cover;
   margin: 0 auto 1.25rem;
@@ -46,14 +46,14 @@ h1 {
   font-family: 'VT323', monospace;
   font-size: 2.4rem;
   font-weight: 400;
-  color: #00ff46;
-  text-shadow: 0 0 8px rgba(0, 255, 70, 0.6);
+  color: #ff2daa;
+  text-shadow: 0 0 8px rgba(255, 45, 170, 0.65);
   margin-bottom: 0.75rem;
   letter-spacing: 0.05em;
 }
 
 .bio {
-  color: #7aff9a;
+  color: #ffaacc;
   line-height: 1.65;
   font-size: 0.88rem;
   margin-bottom: 2rem;
@@ -65,7 +65,7 @@ h1 {
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #00ff46;
+  color: #ff2daa;
   margin-bottom: 1rem;
   opacity: 0.6;
 }
@@ -82,8 +82,8 @@ h1 {
   display: flex;
   align-items: flex-start;
   gap: 0.85rem;
-  background: #111;
-  border: 1px solid #1a4d2a;
+  background: #160018;
+  border: 1px solid #5c1045;
   border-radius: 0;
   padding: 0.9rem 1rem;
 }
@@ -98,14 +98,14 @@ h1 {
 .learning li strong {
   display: block;
   font-size: 0.92rem;
-  color: #00ff46;
+  color: #ff2daa;
   margin-bottom: 0.2rem;
-  text-shadow: 0 0 4px rgba(0, 255, 70, 0.4);
+  text-shadow: 0 0 4px rgba(255, 45, 170, 0.4);
 }
 
 .learning li p {
   font-size: 0.8rem;
-  color: #5ecf78;
+  color: #dd88bb;
   line-height: 1.5;
   opacity: 0.8;
 }
@@ -120,7 +120,7 @@ h1 {
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #00ff46;
+  color: #ff2daa;
   margin-bottom: 1rem;
   opacity: 0.6;
   text-align: center;
@@ -137,15 +137,15 @@ h1 {
   font-size: 0.72rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #00ff46;
+  color: #ff2daa;
   opacity: 0.7;
 }
 
 .form-group input,
 .form-group textarea {
-  background: #111;
-  border: 1px solid #1a4d2a;
-  color: #7aff9a;
+  background: #160018;
+  border: 1px solid #5c1045;
+  color: #ffaacc;
   font-family: 'Share Tech Mono', monospace;
   font-size: 0.88rem;
   padding: 0.6rem 0.75rem;
@@ -156,13 +156,13 @@ h1 {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #2a6b3a;
+  color: #7a1055;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #00ff46;
-  box-shadow: 0 0 6px rgba(0, 255, 70, 0.2);
+  border-color: #ff2daa;
+  box-shadow: 0 0 6px rgba(255, 45, 170, 0.2);
 }
 
 .form-group textarea {
@@ -175,8 +175,8 @@ h1 {
   width: 100%;
   padding: 0.65rem;
   background: transparent;
-  border: 1px solid #00ff46;
-  color: #00ff46;
+  border: 1px solid #ff2daa;
+  color: #ff2daa;
   font-family: 'Share Tech Mono', monospace;
   font-size: 0.88rem;
   letter-spacing: 0.1em;
@@ -186,8 +186,8 @@ h1 {
 }
 
 #gb-submit:hover:not(:disabled) {
-  background: rgba(0, 255, 70, 0.08);
-  box-shadow: 0 0 10px rgba(0, 255, 70, 0.25);
+  background: rgba(255, 45, 170, 0.08);
+  box-shadow: 0 0 10px rgba(255, 45, 170, 0.28);
 }
 
 #gb-submit:disabled {
@@ -197,15 +197,15 @@ h1 {
 
 .gb-status {
   font-size: 0.8rem;
-  color: #5ecf78;
+  color: #dd88bb;
   opacity: 0.6;
   text-align: center;
   padding: 0.5rem 0;
 }
 
 .message-item {
-  background: #111;
-  border: 1px solid #1a4d2a;
+  background: #160018;
+  border: 1px solid #5c1045;
   padding: 0.9rem 1rem;
   margin-bottom: 0.6rem;
 }
@@ -219,19 +219,19 @@ h1 {
 
 .message-header strong {
   font-size: 0.92rem;
-  color: #00ff46;
-  text-shadow: 0 0 4px rgba(0, 255, 70, 0.4);
+  color: #ff2daa;
+  text-shadow: 0 0 4px rgba(255, 45, 170, 0.4);
 }
 
 .message-time {
   font-size: 0.72rem;
-  color: #5ecf78;
+  color: #dd88bb;
   opacity: 0.6;
 }
 
 .message-text {
   font-size: 0.82rem;
-  color: #7aff9a;
+  color: #ffaacc;
   line-height: 1.5;
   opacity: 0.85;
 }
