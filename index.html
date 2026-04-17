@@ -7,7 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="card">
+  <div class="computer">
+    <div class="monitor-body">
+      <div class="monitor-bezel-top">
+        <div class="monitor-vents">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="monitor-brand">WHITNEY-PC</div>
+        <div class="monitor-led"></div>
+      </div>
+
+      <div class="card">
     <img class="avatar" src="Me Pic.jpg" alt="Me" />
     <h1>Whitney Sandin</h1>
     <p class="bio">
@@ -62,7 +72,25 @@
         <p class="gb-status">Loading messages...</p>
       </div>
     </section>
-  </div>
+      </div><!-- .card -->
+
+      <div class="monitor-bezel-bottom">
+        <div class="monitor-grille">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="monitor-info">
+          <span class="monitor-model">MDL-9000</span>
+          <div class="monitor-buttons">
+            <div class="monitor-btn"></div>
+            <div class="monitor-btn"></div>
+            <div class="monitor-btn power-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div><!-- .monitor-body -->
+    <div class="monitor-neck"></div>
+    <div class="monitor-base"></div>
+  </div><!-- .computer -->
 
   <script>
     const API = 'https://guestbook-api-production-7af5.up.railway.app';
