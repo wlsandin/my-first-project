@@ -60,6 +60,16 @@ h1 {
   opacity: 0.85;
 }
 
+.gracie-photo {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto 2rem;
+  border: 1px solid #ff2daa;
+  box-shadow: 0 0 14px rgba(255, 45, 170, 0.35);
+  object-fit: cover;
+}
+
 .learning h2 {
   font-size: 0.72rem;
   font-weight: 400;
