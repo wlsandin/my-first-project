@@ -109,3 +109,129 @@ h1 {
   line-height: 1.5;
   opacity: 0.8;
 }
+
+.guestbook {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.guestbook h2 {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #00ff46;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.form-group label {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #00ff46;
+  opacity: 0.7;
+}
+
+.form-group input,
+.form-group textarea {
+  background: #111;
+  border: 1px solid #1a4d2a;
+  color: #7aff9a;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.88rem;
+  padding: 0.6rem 0.75rem;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #2a6b3a;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00ff46;
+  box-shadow: 0 0 6px rgba(0, 255, 70, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+#gb-submit {
+  display: block;
+  width: 100%;
+  padding: 0.65rem;
+  background: transparent;
+  border: 1px solid #00ff46;
+  color: #00ff46;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.88rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+  margin-bottom: 1.5rem;
+}
+
+#gb-submit:hover:not(:disabled) {
+  background: rgba(0, 255, 70, 0.08);
+  box-shadow: 0 0 10px rgba(0, 255, 70, 0.25);
+}
+
+#gb-submit:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.gb-status {
+  font-size: 0.8rem;
+  color: #5ecf78;
+  opacity: 0.6;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.message-item {
+  background: #111;
+  border: 1px solid #1a4d2a;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.35rem;
+}
+
+.message-header strong {
+  font-size: 0.92rem;
+  color: #00ff46;
+  text-shadow: 0 0 4px rgba(0, 255, 70, 0.4);
+}
+
+.message-time {
+  font-size: 0.72rem;
+  color: #5ecf78;
+  opacity: 0.6;
+}
+
+.message-text {
+  font-size: 0.82rem;
+  color: #7aff9a;
+  line-height: 1.5;
+  opacity: 0.85;
+}

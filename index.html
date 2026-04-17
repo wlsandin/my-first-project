@@ -41,6 +41,98 @@
         </li>
       </ul>
     </section>
+
+    <section class="guestbook">
+      <h2>Guestbook</h2>
+      <form id="guestbook-form">
+        <div class="form-group">
+          <label for="gb-name">Name</label>
+          <input type="text" id="gb-name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="gb-message">Message</label>
+          <textarea id="gb-message" name="message" placeholder="Leave a message..." required></textarea>
+        </div>
+        <button type="submit" id="gb-submit">Submit</button>
+      </form>
+      <div class="messages" id="messages-list">
+        <p class="gb-status">Loading messages...</p>
+      </div>
+    </section>
   </div>
+
+  <script>
+    const API = 'https://guestbook-api-production-7af5.up.railway.app';
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function timeAgo(raw) {
+      if (!raw) return '';
+      const past = new Date(raw);
+      const diff = Math.floor((Date.now() - past) / 1000);
+      if (diff < 60) return `${diff}s ago`;
+      if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
+      if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
+      return `${Math.floor(diff / 86400)}d ago`;
+    }
+
+    async function loadMessages() {
+      const list = document.getElementById('messages-list');
+      try {
+        const res = await fetch(`${API}/messages`);
+        const data = await res.json();
+        const messages = Array.isArray(data) ? data : (data.messages || []);
+        if (!messages.length) {
+          list.innerHTML = '<p class="gb-status">No messages yet — be the first!</p>';
+          return;
+        }
+        const sorted = [...messages].reverse();
+        list.innerHTML = sorted.map(m => {
+          const ts = m.created_at || m.createdAt || m.timestamp || m.date || '';
+          return `
+            <div class="message-item">
+              <div class="message-header">
+                <strong>${escapeHtml(m.name)}</strong>
+                <span class="message-time">${timeAgo(ts)}</span>
+              </div>
+              <p class="message-text">${escapeHtml(m.message)}</p>
+            </div>`;
+        }).join('');
+      } catch {
+        list.innerHTML = '<p class="gb-status">Failed to load messages.</p>';
+      }
+    }
+
+    document.getElementById('guestbook-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('gb-submit');
+      const name = document.getElementById('gb-name').value.trim();
+      const message = document.getElementById('gb-message').value.trim();
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      try {
+        await fetch(`${API}/messages`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, message }),
+        });
+        e.target.reset();
+        await loadMessages();
+      } catch {
+        alert('Failed to send message. Please try again.');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Submit';
+      }
+    });
+
+    loadMessages();
+  </script>
 </body>
 </html>
