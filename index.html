@@ -103,11 +103,18 @@
           const ts = m.created_at || m.createdAt || m.timestamp || m.date || '';
           return `
             <div class="message-item">
-              <div class="message-header">
-                <strong>${escapeHtml(m.name)}</strong>
-                <span class="message-time">${timeAgo(ts)}</span>
+              <div class="floppy-notch"></div>
+              <div class="floppy-label">
+                <div class="message-header">
+                  <strong>${escapeHtml(m.name)}</strong>
+                  <span class="message-time">${timeAgo(ts)}</span>
+                </div>
+                <p class="message-text">${escapeHtml(m.message)}</p>
+                <div class="floppy-hub"></div>
               </div>
-              <p class="message-text">${escapeHtml(m.message)}</p>
+              <div class="floppy-bottom">
+                <div class="floppy-shutter"><div class="floppy-slot"></div></div>
+              </div>
             </div>`;
         }).join('');
       } catch {
